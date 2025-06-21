@@ -1,55 +1,62 @@
+/* Base Styling */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #fffdf6;
-  color: #333;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefefe;
+  color: #222;
+  line-height: 1.5;
 }
 
 header {
-  background-color: #74c69d;
+  background: #74c69d;
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  font-size: 2.2rem;
+  margin: 0;
 }
 
 .description {
-  font-size: 1.2em;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 10px auto 20px;
+  font-size: 1.1rem;
 }
 
 #search {
   width: 60%;
-  padding: 12px;
-  font-size: 18px;
-  margin-top: 20px;
-  border-radius: 8px;
+  max-width: 400px;
+  padding: 12px 16px;
+  border-radius: 25px;
   border: none;
   outline: none;
+  font-size: 16px;
+  margin-top: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
 }
 
 main {
-  padding: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 30px 40px;
 }
 
+#word-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Word Card Styling */
 .word-card {
-  background-color: #f9f9f9;
-  border-left: 5px solid #74c69d;
-  border-radius: 12px;
-  margin: 15px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  background: #ffffff;
+  border: 2px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 100%;
+  max-width: 260px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s;
 }
 
@@ -58,55 +65,68 @@ main {
 }
 
 .word-card h2 {
-  margin-top: 0;
+  font-size: 1.2rem;
   color: #4a4e69;
+  margin: 0 0 10px;
+}
+
+.word-card p {
+  font-size: 0.9rem;
+  margin: 4px 0;
 }
 
 .word-card button {
-  margin-top: 10px;
-  background-color: #4a4e69;
+  background: #4a4e69;
   color: white;
   border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  margin-top: 8px;
   cursor: pointer;
 }
 
-.feedback-section {
-  background-color: #ffcb77;
-  padding: 40px 20px;
+/* Feedback Section */
+.feedback {
+  background: #ffcb77;
   text-align: center;
+  padding: 40px 20px;
 }
 
-.feedback-section h2 {
-  color: #333;
+.feedback h2 {
   margin-bottom: 10px;
 }
 
-.feedback-section input,
-.feedback-section textarea {
-  width: 60%;
-  padding: 10px;
-  margin: 10px auto;
-  display: block;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.feedback form {
+  max-width: 500px;
+  margin: auto;
 }
 
-.feedback-section button {
+.feedback input,
+.feedback textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.feedback button {
   background-color: #4a4e69;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
+  padding: 10px 18px;
   border: none;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
+/* Footer */
 footer {
+  background: #333;
+  color: #fff;
   text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #eee;
+  padding: 16px;
+  font-size: 0.9rem;
 }
